@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Illinois Real Estate School - 15-Hour Pre-Licensing Applied Principles Interactive Course
+ </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%= yield :head %>
+    <%= stylesheet_link_tag "application", :media => "all" %>
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    <%= csrf_meta_tags %>
+
+
+
+
+  </head>
+  <body>
+
+    <div class="navbar navbar-default navbar-static-top">
+      <div class="container">
+        <a class="navbar-brand" href="/home"><img src="images/logo.png" ></a>
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <h4 class="mtxl site-header">15-Hour Pre-Licensing Applied Principles Interactive Course</h4>
+        <div class="navbar-collapse collapse navbar-responsive-collapse floatr">
+          <ul class="nav navbar-nav">
+            <!--<li><%#= link_to 'Answers', answers_path, :class => 'navbar-link' %></li>
+            <li><%#= link_to 'Worksheet', worksheets_path, :class => 'navbar-link' %></li> -->
+            <li><%= link_to 'Feedback', feedbacks_path, :class => 'navbar-link' %></li>
+
+            <% if user_signed_in? %>
+              <li><%= link_to 'Course', course_path, :class => 'navbar-link' %></li>
+              <li><%= link_to current_user.email, edit_user_registration_path, :class => 'navbar-link' %></li>
+              <li><%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %></li>
+            <% else %>
+              <li><%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %></li>
+              <li><%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %></li>   
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <%= bootstrap_flash %>
+          <%= yield %>
+        </div>
+        
+      </div><!--/row-->
+
+
+    </div> <!-- /container -->
+
+
+    <footer>
+      <p style="padding: 40px 0 0 0;">&copy;  <%= link_to "Real Estate School of Illinois
+  ", "http://www.ilrealestateschool.com",  :target => "_blank" %> 2016</p>
+    </footer>
+
+    
+  </body>
+</html>

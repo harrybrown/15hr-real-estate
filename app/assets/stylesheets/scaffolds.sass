@@ -1,0 +1,125 @@
+body, html, nav
+  width: 100%
+
+body
+  color: $darkest_shade
+  font-family: Arial,"Helvetica Neue",Helvetica,sans-serif
+  font-size:  1em 
+  line-height: 1.5em
+
+
+p, ol, ul, td
+  font-family: Arial,"Helvetica Neue",Helvetica,sans-serif
+  font-size:  1em
+  line-height: 1.5em
+
+pre
+  background-color: #eee
+  padding: 10px
+  font-size: 11px
+
+a
+  color: $primary_color
+
+footer a
+  color: $lightest_shade !important
+
+div
+
+#notice
+  color: green
+
+.field_with_errors
+  padding: 2px
+  background-color: red
+  display: table
+
+#error_explanation
+  width: 450px
+  border: 2px solid red
+  padding: 7px
+  padding-bottom: 0
+  margin-bottom: 20px
+  background-color: #f0f0f0
+  h2
+    text-align: left
+    font-weight: bold
+    padding: 5px 5px 5px 15px
+    font-size: 12px
+    margin: -7px
+    margin-bottom: 0px
+    background-color: #c00
+    color: #fff
+
+ul li
+  font-size: 14px
+  list-style: square
+  margin-bottom: 8px
+
+.responsive-image
+  width: 100%
+  max-width: 800px
+
+footer
+  background: $primary_color
+  min-height: 200px
+  vertical-align: bottom
+  padding: 40px 0 0 0
+  text-align: center
+  color: $lightest_shade
+
+.navbar
+  min-height: 150px !important
+
+/* ACCORDIAN */
+
+.accordion 
+  margin: 1em 0
+  h3 
+    background-color: $primary_color
+    color: #fff
+    cursor: pointer
+    margin: 0 0 1px 0
+    padding: 4px 10px
+  h3.current 
+    background: #67644b
+    cursor: default
+  div.pane 
+    padding: 5px 10px
+
+.form-group
+  display: block !important
+
+#new_worksheet
+  .form-control
+    width: 200px
+    display: inline-block
+  p
+    margin-left: 200px
+
+#answer_question_id, #answer_user_id, #worksheet_user_id, #feedback_user_id
+  display: none !important
+
+.accent
+  color: $light_shade
+  font-weight: bold
+
+.answer-response
+  color: #1955ff
+  font-weight: bold
+  font-size: 16px
+
+h1,h2,h3
+  color: $alternate_darker
+
+.site-header
+  @media screen and (max-width: 700px)
+    display: none
+
+li
+  font-weight: bold
+
+.worksheet-responses
+  margin-left: 100px
+  font-weight: bold
+  color: $light_shade

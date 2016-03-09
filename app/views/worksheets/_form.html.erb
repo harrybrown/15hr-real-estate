@@ -1,0 +1,48 @@
+<%= form_for(@worksheet, html: { class: "form-horizontal", role: "form" }) do |f| %>
+  <% if @worksheet.errors.any? %>
+    <div class="alert alert-danger alert-dismissable" role="alert">
+      <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+      <h4><%= pluralize(@worksheet.errors.count, "error") %> prohibited this worksheet from being saved:</h4>
+
+      <ul>
+      <% @worksheet.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+      <p><%= f.text_field :user_id, class: "form-control", :value => current_user.id  %></p>
+
+
+      <p>Sales Price $ <%= f.text_field :sales, class: "form-control" %></p>
+
+      <p>Transfer Tax Stamps $ <%= f.text_field :transfer, class: "form-control" %></p>
+  
+      <p>Title Charges $ <%= f.text_field :title, class: "form-control" %></p>
+
+      <p>Inspections $ <%= f.text_field :inspections, class: "form-control" %></p>
+
+      <p>Attorney $ <%= f.text_field :attorney, class: "form-control" %></p>
+ 
+      <p>Survey $ <%= f.text_field :survey, class: "form-control" %></p>
+
+      <p>Home Warranty Fee $ <%= f.text_field :home, class: "form-control" %></p>
+
+      <p>TOTAL $ <%= f.text_field :total, class: "form-control" %></p>
+
+      <p>Broker Commissions $ <%= f.text_field :broker, class: "form-control" %></p>
+
+      <p>Loan Discount Points $ <%= f.text_field :loan, class: "form-control" %></p>
+
+      <p>First Mortgage Payoff $ <%= f.text_field :first, class: "form-control" %></p>
+
+      <p>Repairs $ <%= f.text_field :repairs, class: "form-control" %></p>
+
+      <p>Other Liens/Deductions $ <%= f.text_field :other, class: "form-control" %></p>
+
+      <p>NET CASH TO SELLER $ <%= f.text_field :net, class: "form-control" %></p>
+    
+      <%= f.submit ( f.object.new_record? ? "Save Worksheet" : "Save Worksheet"),  class: "btn btn-primary" %>
+
+<% end %>

@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  sales: MyString
+  transfer: MyString
+  title: MyString
+  inspections: MyString
+  attorney: MyString
+  survey: MyString
+  home: MyString
+  total: MyString
+  broker: MyString
+  loan: MyString
+  first: MyString
+  repairs: MyString
+  other: MyString
+  net: MyString
+
+two:
+  sales: MyString
+  transfer: MyString
+  title: MyString
+  inspections: MyString
+  attorney: MyString
+  survey: MyString
+  home: MyString
+  total: MyString
+  broker: MyString
+  loan: MyString
+  first: MyString
+  repairs: MyString
+  other: MyString
+  net: MyString

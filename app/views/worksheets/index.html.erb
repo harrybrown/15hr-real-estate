@@ -1,0 +1,57 @@
+<div class="page-header">
+  <%= link_to new_worksheet_path, class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-plus"></span>
+    New Worksheet
+  <% end %>
+  <h1>Listing worksheets</h1>
+</div>
+
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover">
+    <thead>
+      <tr>
+            <th>Sales</th>
+            <th>Transfer</th>
+            <th>Title</th>
+            <th>Inspections</th>
+            <th>Attorney</th>
+            <th>Survey</th>
+            <th>Home</th>
+            <th>Total</th>
+            <th>Broker</th>
+            <th>Loan</th>
+            <th>First</th>
+            <th>Repairs</th>
+            <th>Other</th>
+            <th>Net</th>
+            <th>User ID</th>
+            <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <%= content_tag_for(:tr, @worksheets) do |worksheet| %>
+            <td><%= worksheet.sales %></td>
+            <td><%= worksheet.transfer %></td>
+            <td><%= worksheet.title %></td>
+            <td><%= worksheet.inspections %></td>
+            <td><%= worksheet.attorney %></td>
+            <td><%= worksheet.survey %></td>
+            <td><%= worksheet.home %></td>
+            <td><%= worksheet.total %></td>
+            <td><%= worksheet.broker %></td>
+            <td><%= worksheet.loan %></td>
+            <td><%= worksheet.first %></td>
+            <td><%= worksheet.repairs %></td>
+            <td><%= worksheet.other %></td>
+            <td><%= worksheet.net %></td>
+            <td><%= worksheet.user_id %></td>
+            <td><%= link_to 'Show', worksheet %></td>
+        <td><%= link_to 'Edit', edit_worksheet_path(worksheet) %></td>
+        <td><%= link_to 'Destroy', worksheet, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% end %>
+    </tbody>
+  </table>
+</div>

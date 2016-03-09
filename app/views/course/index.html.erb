@@ -1,0 +1,705 @@
+<div class="accordion">
+  <h3>Unit 1</h3>
+
+  <div class="pane">
+
+    <h3>Section 1 Audio</h3>
+    <div class="pane">
+      <%= audio_tag ('http://ilrealestateschool-75hour.com/15-hour/unit-1-section-1.mp3'), :controls =>true, :autoplay =>false, :preload =>:none %>
+    </div>
+    <h3>Section 2 Audio</h3>
+    <div class="pane">
+      <%= audio_tag ('http://ilrealestateschool-75hour.com/15-hour/unit-1-section-2.mp3'), :controls =>true, :autoplay =>false, :preload =>:none %>
+    </div>
+    <h3>Section 3 Audio</h3>
+    <div class="pane">
+      <%= audio_tag ('http://ilrealestateschool-75hour.com/15-hour/unit-1-section-3.mp3'), :controls =>true, :autoplay =>false, :preload =>:none %>
+    </div>
+    <h3>Listing Presentation – Fact Pattern and Questions 1-5</h3>
+    <div class="pane">
+      <p><strong>Listing Presentation</strong></p>
+      <p>John is selling his brick-and frame, 1,500 square foot ranch-style home in Sunnydale. He has set up listing appointments with three real estate brokers who have been referred to him. John is trying to sell his house for the fourth time in three years. His house was previously listed at the following prices: $315,000 (180 days on the market), $300,000 (90 days on the market), and $250,000 (90 days on the market). </p>
+      <p>There are currently six listings for ranch-style homes between $175,000 and $235,000. There have been no listings in Sunnydale as high as $315,000. There have been five 2,000 square-foot, two-story dwellings listed for $285,000-$299,000 during the past three years. The highest sale of a ranch-style home in the past six months is $215,000 with 125 days on the market. The highest sale of a two-story home is $265,000 with 137 days on the market. </p>
+      <p>Anita, a real estate broker with Air Tight Realty, arrives at John&rsquo;s house for a listing appointment. She has a digital camera, a smartphone, and a listing presentation. As she starts her presentation, John states &ldquo;I need at least $200,000 after I pay your commission. And I hope you aren&rsquo;t as pushy as the last couple of agents I spoke with. They told me I didn&rsquo;t have a chance of selling my house for that kind of money.&rdquo;</p>
+      <p>Anita makes some quick calculations and looks at the Comparative Market Analysis (CMA) she had prepared. She responds, &ldquo;In order for you to pay our commission of 5% and receive $200,000, we would have to sell your house for $210,500. But that doesn&rsquo;t cover your other closing costs. We should add $5,000 for good measure, making it $215,500. This will be tough as the highest sale of a ranch in Sunnydale is $215,000, and that property was in better condition than your home. Can you be flexible about your asking price and sales price? &ldquo;</p>
+      <ol>
+        <li>Should Anita accept the listing at any price and hope John is reasonable later and lowers his price?
+          <% if current_user.answers.where(question_id: '1-1').count > 0 %>
+            <p class="answer-response"><%= current_user.answers.where(question_id: '1-1').first.response %></p>
+          <% else %>
+            <%= form_for(@answer, html: { class: "form-horizontal", role: "form" }) do |f| %>
+              <%= f.text_area :response, class: "form-control" %>
+              <%= f.text_field :question_id, class: "form-control", :value => '1-1' %>
+              <%= f.number_field :user_id, class: "form-control", :value => current_user.id  %>
+              <%= f.submit ( f.object.new_record? ? "Save Answer" : "Save Answer"), class: "btn btn-primary" %>
+          <% end %>
+        <% end %>
+        </li>
+        <li>Can Anita say &ldquo;Everyone charges a 5% commission. It&rsquo;s the standard rate&rdquo;?
+          <% if current_user.answers.where(question_id: '1-2').count > 0 %>
+            <p class="answer-response"><%= current_user.answers.where(question_id: '1-2').first.response %></p>
+          <% else %>
+            <%= form_for(@answer, html: { class: "form-horizontal", role: "form" }) do |f| %>
+              <%= f.text_area :response, class: "form-control" %>
+              <%= f.text_field :question_id, class: "form-control", :value => '1-2' %>
+              <%= f.number_field :user_id, class: "form-control", :value => current_user.id  %>
+              <%= f.submit ( f.object.new_record? ? "Save Answer" : "Save Answer"), class: "btn btn-primary" %>
+          <% end %>
+        <% end %>
+        </li>
+        <li>What data should Anita have in her CMA?
+          <% if current_user.answers.where(question_id: '1-3').count > 0 %>
+            <p class="answer-response"><%= current_user.answers.where(question_id: '1-3').first.response %></p>
+          <% else %>
+            <%= form_for(@answer, html: { class: "form-horizontal", role: "form" }) do |f| %>
+              <%= f.text_area :response, class: "form-control" %>
+              <%= f.text_field :question_id, class: "form-control", :value => '1-3' %>
+              <%= f.number_field :user_id, class: "form-control", :value => current_user.id  %>
+              <%= f.submit ( f.object.new_record? ? "Save Answer" : "Save Answer"), class: "btn btn-primary" %>
+          <% end %>
+        <% end %>
+        </li>
+        <li>Anita says &ldquo;The other agents aren&rsquo;t as good as I am. They have been sanctioned by our state licensing agency&rdquo;?
+          <% if current_user.answers.where(question_id: '1-4').count > 0 %>
+            <p class="answer-response"><%= current_user.answers.where(question_id: '1-4').first.response %></p>
+          <% else %>
+            <%= form_for(@answer, html: { class: "form-horizontal", role: "form" }) do |f| %>
+              <%= f.text_area :response, class: "form-control" %>
+              <%= f.text_field :question_id, class: "form-control", :value => '1-4' %>
+              <%= f.number_field :user_id, class: "form-control", :value => current_user.id  %>
+              <%= f.submit ( f.object.new_record? ? "Save Answer" : "Save Answer"), class: "btn btn-primary" %>
+          <% end %>
+        <% end %>
+        </li>
+        <li>If John is frustrated in his inability to sell his house for the amount he wants, what should Anita do to educate John? Will this education process help Anita obtain the listing? How?
+          <% if current_user.answers.where(question_id: '1-5').count > 0 %>
+            <p class="answer-response"><%= current_user.answers.where(question_id: '1-5').first.response %></p>
+          <% else %>
+            <%= form_for(@answer, html: { class: "form-horizontal", role: "form" }) do |f| %>
+              <%= f.text_area :response, class: "form-control" %>
+              <%= f.text_field :question_id, class: "form-control", :value => '1-5' %>
+              <%= f.number_field :user_id, class: "form-control", :value => current_user.id  %>
+              <%= f.submit ( f.object.new_record? ? "Save Answer" : "Save Answer"), class: "btn btn-primary" %>
+          <% end %>
+        <% end %>
+        </li>
+      </ol>
+    </div>
+    <h3>Section 4 Audio</h3>
+    <div class="pane">
+      <%= audio_tag ('http://ilrealestateschool-75hour.com/15-hour/unit-1-section-4.mp3'), :controls =>true, :autoplay =>false, :preload =>:none %>
+    </div>
+    <h3>Seller’s Net Worksheet and Questions 1-4</h3>
+    <div class="pane">
+      <p><strong>Seller&rsquo;s Net Worksheet</strong></p>
+      <p>Mark is selling his home at 123 Main Street in Anytown, Illinois. Amy, a local broker, has taken the listing. Amy recommends that a seller net worksheet be filled out to give John a good idea of how much he might receive from the closing. The following details apply to this transaction:</p>
+      <p>Sales Price: $215,000<br />
+        Date of Sale: June 15th<br />
+        Real Estate Commission: 5%<br />
+        First Mortgage Payoff: $150,000<br />
+        Estimated Repairs: $5,000<br />
+        Transfer Tax : Total of $.75 per $500 for state and county <br />
+        Ad Valorem Tax: $2,400 (paid in arrears), use the statutory month method<br />
+        Title Charges: $1,200<br />
+        Attorney Fee: $500</p>
+        <% if current_user.worksheets.count > 0 %>
+          <%= render :file => 'worksheets/show' %>
+        <% else %>
+          <%= render 'worksheets/form' %>
+        <% end %>
+      <ol>
+        <li>Will the seller have enough money at closing?
+          <% if current_user.answers.where(question_id: '1-6').count > 0 %>
+            <p class="answer-response"><%= current_user.answers.where(question_id: '1-6').first.response %></p>
+          <% else %>
+            <%= form_for(@answer, html: { class: "form-horizontal", role: "form" }) do |f| %>
+              <%= f.text_area :response, class: "form-control" %>
+              <%= f.text_field :question_id, class: "form-control", :value => '1-6' %>
+              <%= f.number_field :user_id, class: "form-control", :value => current_user.id  %>
+              <%= f.submit ( f.object.new_record? ? "Save Answer" : "Save Answer"), class: "btn btn-primary" %>
+          <% end %>
+        <% end %>
+      </li>
+        <li>Will the seller have to bring money to closing?
+          <% if current_user.answers.where(question_id: '1-7').count > 0 %>
+            <p class="answer-response"><%= current_user.answers.where(question_id: '1-7').first.response %></p>
+          <% else %>
+            <%= form_for(@answer, html: { class: "form-horizontal", role: "form" }) do |f| %>
+              <%= f.text_area :response, class: "form-control" %>
+              <%= f.text_field :question_id, class: "form-control", :value => '1-7' %>
+              <%= f.number_field :user_id, class: "form-control", :value => current_user.id  %>
+              <%= f.submit ( f.object.new_record? ? "Save Answer" : "Save Answer"), class: "btn btn-primary" %>
+          <% end %>
+        <% end %>
+      </li>
+        <li>What if the seller&rsquo;s repairs were $50,000? Would the seller have to bring money to closing?
+          <% if current_user.answers.where(question_id: '1-8').count > 0 %>
+            <p class="answer-response"><%= current_user.answers.where(question_id: '1-8').first.response %></p>
+          <% else %>
+            <%= form_for(@answer, html: { class: "form-horizontal", role: "form" }) do |f| %>
+              <%= f.text_area :response, class: "form-control" %>
+              <%= f.text_field :question_id, class: "form-control", :value => '1-8' %>
+              <%= f.number_field :user_id, class: "form-control", :value => current_user.id  %>
+              <%= f.submit ( f.object.new_record? ? "Save Answer" : "Save Answer"), class: "btn btn-primary" %>
+          <% end %>
+        <% end %>
+      </li>
+        <li>What if the first mortgage balance was $250,000. Would the seller have to bring money to closing?
+          <% if current_user.answers.where(question_id: '1-9').count > 0 %>
+            <p class="answer-response"><%= current_user.answers.where(question_id: '1-9').first.response %></p>
+          <% else %>
+            <%= form_for(@answer, html: { class: "form-horizontal", role: "form" }) do |f| %>
+              <%= f.text_area :response, class: "form-control" %>
+              <%= f.text_field :question_id, class: "form-control", :value => '1-9' %>
+              <%= f.number_field :user_id, class: "form-control", :value => current_user.id  %>
+              <%= f.submit ( f.object.new_record? ? "Save Answer" : "Save Answer"), class: "btn btn-primary" %>
+          <% end %>
+        <% end %>
+      </li>
+      </ol>
+    </div>
+    <h3>Section 5 Audio</h3>
+    <div class="pane">
+      <%= audio_tag ('http://ilrealestateschool-75hour.com/15-hour/unit-1-section-5.mp3'), :controls =>true, :autoplay =>false, :preload =>:none %>
+    </div>
+
+  </div>
+
+  <h3>Unit 2</h3>
+
+  <div class="pane">
+
+    <h3>Section 1 Audio</h3>
+    <div class="pane">
+      <%= audio_tag ('http://ilrealestateschool-75hour.com/15-hour/unit-2-section-1.mp3'), :controls =>true, :autoplay =>false, :preload =>:none %>
+    </div>
+    <h3>Fact Pattern and Questions 1-6</h3>
+    <div class="pane">
+      <p><strong>Disclosure/Fraud</strong></p>
+      <p>Juan and Patricia Sivel have lived in their home for 32 years, where they have cared for that 1,200 square-foot, four bedroom, two-story home. Now their children have moved out and their mortgage is paid off. </p>
+      <p>Unfortunately, Patricia was recently diagnosed with dementia. Although she is asymptomatic, the Sivels are quite concerned about what the future holds. The Sivels&rsquo; children have suggested that the family home be placed up for sale, with the Sivels moving to a retirement community.</p>
+      <p>Ten years ago, the Sivels retired. This limited their income substantially, causing them to dip into their savings. They now have to scrape by month-to-month on their social security checks. Maintenance on their home has been deferred for several years. Their son, Bob Sivel, called a general contractor who made the following statement: </p>
+      <p>Roof Cover - $3,500<br />
+        Carpet - $2,500<br />
+        Exterior Paint - $2,750<br />
+        Interior Paint - $1,500<br />
+        Appliance - $3,000<br />
+        Repair leaky pipe - $1,500</p>
+      <p>The contractor notes the infrastructure of the house appears sound. The family, concerned about the cost of repairs, asked for a home inspection to be performed by a licensed home inspector. After his inspection, he sent a report to the family, which did not mention issues with the roof cover, carpet or appliances. The inspector also performed a radon test and found levels of 5 picocuries per liter.  </p>
+      <p>The elder Sivel has decided to sell the family home. He contacts Maureen, a local real estate agent, who shows the Sivels a CMA. When Maureen asks the Sivels whether there are any defects or maintenance that should be reported, Mr. Sivel says &ldquo;No, we just had the house all fixed up. The roof is new.&rdquo; Maureen notes that the roof does not look new and questions the Sivels further.</p>
+      <ol>
+        <li>What evidence should Maureen look for in determining the age of the roof? Should Maureen accept the Sivels at their word?
+          <% if current_user.answers.where(question_id: '2-1').count > 0 %>
+            <p class="answer-response"><%= current_user.answers.where(question_id: '2-1').first.response %></p>
+          <% else %>
+            <%= form_for(@answer, html: { class: "form-horizontal", role: "form" }) do |f| %>
+              <%= f.text_area :response, class: "form-control" %>
+              <%= f.text_field :question_id, class: "form-control", :value => '2-1' %>
+              <%= f.number_field :user_id, class: "form-control", :value => current_user.id  %>
+              <%= f.submit ( f.object.new_record? ? "Save Answer" : "Save Answer"), class: "btn btn-primary" %>
+          <% end %>
+        <% end %>
+      </li>
+        <li>Should Maureen question the family about the history of the home? Can Maureen access public records for proof of repairs?
+          <% if current_user.answers.where(question_id: '2-2').count > 0 %>
+            <p class="answer-response"><%= current_user.answers.where(question_id: '2-2').first.response %></p>
+          <% else %>
+            <%= form_for(@answer, html: { class: "form-horizontal", role: "form" }) do |f| %>
+              <%= f.text_area :response, class: "form-control" %>
+              <%= f.text_field :question_id, class: "form-control", :value => '2-2' %>
+              <%= f.number_field :user_id, class: "form-control", :value => current_user.id  %>
+              <%= f.submit ( f.object.new_record? ? "Save Answer" : "Save Answer"), class: "btn btn-primary" %>
+          <% end %>
+        <% end %>
+      </li>
+        <li>What is the total repair cost? Must this be revealed to prospective buyers?
+          <% if current_user.answers.where(question_id: '2-3').count > 0 %>
+            <p class="answer-response"><%= current_user.answers.where(question_id: '2-3').first.response %></p>
+          <% else %>
+            <%= form_for(@answer, html: { class: "form-horizontal", role: "form" }) do |f| %>
+              <%= f.text_area :response, class: "form-control" %>
+              <%= f.text_field :question_id, class: "form-control", :value => '2-3' %>
+              <%= f.number_field :user_id, class: "form-control", :value => current_user.id  %>
+              <%= f.submit ( f.object.new_record? ? "Save Answer" : "Save Answer"), class: "btn btn-primary" %>
+          <% end %>
+        <% end %>
+      </li>
+        <li>Can Maureen accept the listing? Is Mrs. Sivel&rsquo;s condition a factor?
+          <% if current_user.answers.where(question_id: '2-4').count > 0 %>
+            <p class="answer-response"><%= current_user.answers.where(question_id: '2-4').first.response %></p>
+          <% else %>
+            <%= form_for(@answer, html: { class: "form-horizontal", role: "form" }) do |f| %>
+              <%= f.text_area :response, class: "form-control" %>
+              <%= f.text_field :question_id, class: "form-control", :value => '2-4' %>
+              <%= f.number_field :user_id, class: "form-control", :value => current_user.id  %>
+              <%= f.submit ( f.object.new_record? ? "Save Answer" : "Save Answer"), class: "btn btn-primary" %>
+          <% end %>
+        <% end %>
+      </li>
+        <li>If Maureen accepts the listing and the Sivels fill out a seller disclosure form that indicates there are no physical issues, is Maureen liable? Are the Sivels liable?
+          <% if current_user.answers.where(question_id: '2-5').count > 0 %>
+            <p class="answer-response"><%= current_user.answers.where(question_id: '2-5').first.response %></p>
+          <% else %>
+            <%= form_for(@answer, html: { class: "form-horizontal", role: "form" }) do |f| %>
+              <%= f.text_area :response, class: "form-control" %>
+              <%= f.text_field :question_id, class: "form-control", :value => '2-5' %>
+              <%= f.number_field :user_id, class: "form-control", :value => current_user.id  %>
+              <%= f.submit ( f.object.new_record? ? "Save Answer" : "Save Answer"), class: "btn btn-primary" %>
+          <% end %>
+        <% end %>
+      </li>
+        <li>When an offer is made, can the Sivels sell their house &ldquo;as is&rdquo; and avoid liability?
+          <% if current_user.answers.where(question_id: '2-6').count > 0 %>
+            <p class="answer-response"><%= current_user.answers.where(question_id: '2-6').first.response %></p>
+          <% else %>
+            <%= form_for(@answer, html: { class: "form-horizontal", role: "form" }) do |f| %>
+              <%= f.text_area :response, class: "form-control" %>
+              <%= f.text_field :question_id, class: "form-control", :value => '2-6' %>
+              <%= f.number_field :user_id, class: "form-control", :value => current_user.id  %>
+              <%= f.submit ( f.object.new_record? ? "Save Answer" : "Save Answer"), class: "btn btn-primary" %>
+          <% end %>
+        <% end %>
+      </li>
+      </ol>
+    </div>
+    <h3>Section 2 Audio</h3>
+    <div class="pane">
+      <%= audio_tag ('http://ilrealestateschool-75hour.com/15-hour/unit-2-section-2.mp3'), :controls =>true, :autoplay =>false, :preload =>:none %>
+    </div>
+    <h3>Questions 7-9</h3>
+    <div class="pane">
+      <ol start="7">
+        <li>Must the Sivels disclose the radon issue? Is Maureen liable for this disclosure? What steps must be taken to satisfy radon disclosure laws?
+          <% if current_user.answers.where(question_id: '2-7').count > 0 %>
+            <p class="answer-response"><%= current_user.answers.where(question_id: '2-7').first.response %></p>
+          <% else %>
+            <%= form_for(@answer, html: { class: "form-horizontal", role: "form" }) do |f| %>
+              <%= f.text_area :response, class: "form-control" %>
+              <%= f.text_field :question_id, class: "form-control", :value => '2-7' %>
+              <%= f.number_field :user_id, class: "form-control", :value => current_user.id  %>
+              <%= f.submit ( f.object.new_record? ? "Save Answer" : "Save Answer"), class: "btn btn-primary" %>
+          <% end %>
+        <% end %>
+      </li>
+        <li>What are the total costs involved in the repair? Whose report should receive more weight, the contractor&rsquo;s or the home inspector&rsquo;s? Would it make it different if the contractor has 25 years of experience and the home inspector only two years?
+          <% if current_user.answers.where(question_id: '2-8').count > 0 %>
+            <p class="answer-response"><%= current_user.answers.where(question_id: '2-8').first.response %></p>
+          <% else %>
+            <%= form_for(@answer, html: { class: "form-horizontal", role: "form" }) do |f| %>
+              <%= f.text_area :response, class: "form-control" %>
+              <%= f.text_field :question_id, class: "form-control", :value => '2-8' %>
+              <%= f.number_field :user_id, class: "form-control", :value => current_user.id  %>
+              <%= f.submit ( f.object.new_record? ? "Save Answer" : "Save Answer"), class: "btn btn-primary" %>
+          <% end %>
+        <% end %>
+      </li>
+        <li>Are there other issues that the Sivels and Maureen must address?
+          <% if current_user.answers.where(question_id: '2-9').count > 0 %>
+            <p class="answer-response"><%= current_user.answers.where(question_id: '2-9').first.response %></p>
+          <% else %>
+            <%= form_for(@answer, html: { class: "form-horizontal", role: "form" }) do |f| %>
+              <%= f.text_area :response, class: "form-control" %>
+              <%= f.text_field :question_id, class: "form-control", :value => '2-9' %>
+              <%= f.number_field :user_id, class: "form-control", :value => current_user.id  %>
+              <%= f.submit ( f.object.new_record? ? "Save Answer" : "Save Answer"), class: "btn btn-primary" %>
+          <% end %>
+        <% end %>
+      </li>
+      </ol>
+    </div>
+    <h3>Section 3 Audio</h3>
+    <div class="pane">
+      <%= audio_tag ('http://ilrealestateschool-75hour.com/15-hour/unit-2-section-3.mp3'), :controls =>true, :autoplay =>false, :preload =>:none %>
+    </div>
+
+  </div>
+
+  <h3>Unit 3</h3>
+
+  <div class="pane">
+
+    <h3>Section 1 Audio</h3>
+    <div class="pane">
+      <%= audio_tag ('http://ilrealestateschool-75hour.com/15-hour/unit-3-section-1.mp3'), :controls =>true, :autoplay =>false, :preload =>:none %>
+    </div>
+    <h3>Questions 1-7</h3>
+    <div class="pane">
+      <ol start="7">
+        <li>Must the Sivels disclose the radon issue? Is Maureen liable for this disclosure? What steps must be taken to satisfy radon disclosure laws?
+          <% if current_user.answers.where(question_id: '3-1').count > 0 %>
+            <p class="answer-response"><%= current_user.answers.where(question_id: '3-1').first.response %></p>
+          <% else %>
+            <%= form_for(@answer, html: { class: "form-horizontal", role: "form" }) do |f| %>
+              <%= f.text_area :response, class: "form-control" %>
+              <%= f.text_field :question_id, class: "form-control", :value => '3-1' %>
+              <%= f.number_field :user_id, class: "form-control", :value => current_user.id  %>
+              <%= f.submit ( f.object.new_record? ? "Save Answer" : "Save Answer"), class: "btn btn-primary" %>
+          <% end %>
+        <% end %>
+      </li>
+        <li>What are the total costs involved in the repair? Whose report should receive more weight, the contractor&rsquo;s or the home inspector&rsquo;s? Would it make it different if the contractor has 25 years of experience and the home inspector only two years?
+          <% if current_user.answers.where(question_id: '3-2').count > 0 %>
+            <p class="answer-response"><%= current_user.answers.where(question_id: '3-2').first.response %></p>
+          <% else %>
+            <%= form_for(@answer, html: { class: "form-horizontal", role: "form" }) do |f| %>
+              <%= f.text_area :response, class: "form-control" %>
+              <%= f.text_field :question_id, class: "form-control", :value => '3-2' %>
+              <%= f.number_field :user_id, class: "form-control", :value => current_user.id  %>
+              <%= f.submit ( f.object.new_record? ? "Save Answer" : "Save Answer"), class: "btn btn-primary" %>
+          <% end %>
+        <% end %>
+      </li>
+        <li>Are there other issues that the Sivels and Maureen must address?
+          <% if current_user.answers.where(question_id: '3-3').count > 0 %>
+            <p class="answer-response"><%= current_user.answers.where(question_id: '3-3').first.response %></p>
+          <% else %>
+            <%= form_for(@answer, html: { class: "form-horizontal", role: "form" }) do |f| %>
+              <%= f.text_area :response, class: "form-control" %>
+              <%= f.text_field :question_id, class: "form-control", :value => '3-3' %>
+              <%= f.number_field :user_id, class: "form-control", :value => current_user.id  %>
+              <%= f.submit ( f.object.new_record? ? "Save Answer" : "Save Answer"), class: "btn btn-primary" %>
+          <% end %>
+        <% end %>
+      </li>
+      </ol>
+    </div>
+    <h3>Section 1 Audio</h3>
+    <div class="pane">
+      <%= audio_tag ('http://ilrealestateschool-75hour.com/15-hour/unit-3-section-2.mp3'), :controls =>true, :autoplay =>false, :preload =>:none %>
+    </div>
+
+  </div>
+
+  <h3>Unit 4</h3>
+
+  <div class="pane">
+
+    <h3>Section 1 Audio</h3>
+    <div class="pane">
+      <%= audio_tag ('http://ilrealestateschool-75hour.com/15-hour/unit-4-section-1.mp3'), :controls =>true, :autoplay =>false, :preload =>:none %>
+    </div>
+    <h3>Questions 1-6</h3>
+    <div class="pane">
+      <p><strong>Personal Assistant/Ministerial Services</strong></p>
+      <p>James Mason is a server at a small restaurant. Tired of being on his feet all day in a job that offers him little chance for advancement, he has heard that real estate is the place to be. It&rsquo;s easy to break in, and he could make lots of money with very little effort. After all, his Aunt Betty has been a broker with Oak Forest Realty for years, has a nice house and car, and just shows houses all day. How hard can that be?</p>
+      <p>James talks with Aunt Betty, who explains that real estate has strict entrance requirements, continuing-education requirements, and places great demands on one&rsquo;s time management abilities. &ldquo;If you sit around all day, you won&rsquo;t make any money&rdquo; says Aunt Betty.</p>
+      <p>James takes this news with a grain of salt. &ldquo;We&rsquo;ll see if Aunt Betty is just trying to scare me.&rdquo; Aunt Betty decides to hire her nephew on a trial basis as a personal assistant. James meets Aunt Betty at her office the next day. &ldquo;Should I get a license right away?&rdquo; he asks.  </p>
+      <p>&ldquo;No,&rdquo; she responds, &ldquo;Let&rsquo;s see if you&rsquo;re suited to this job before we send you to real estate school.&rdquo; She instructs James to read the office policy and procedures manual. James starts to read it, but quickly becomes bored and plays a game on his smartphone instead. Later in the day, Aunt Betty lets James answer the phone for her. A customer calls and asks for information on one of Aunt Betty&rsquo;s listings. James answers the customer&rsquo;s questions and faxes a copy of the listing. James assures the customer that the property is a &ldquo;cream puff,&rdquo; even though he has never seen the property.</p>
+      <p>The next day, Aunt Betty asks James to have a set of keys made for one of her listings. Later, Betty calls James in his car and asks him to meet an appraiser at the listing. &ldquo;Let him in. When she&rsquo;s done, lock the door again. While you&rsquo;re there, show Carrie around the house. She&rsquo;s also a broker.&rdquo; James complies.</p>
+      <p>Betty&rsquo;s sponsoring broker, Sarah, calls Betty into her office. &ldquo;Betty, I see you&rsquo;ve hired a personal assistant. Has he read the policy and procedures manual? What are his duties? Is he earning commissions? Is he licensed?&rdquo; Betty answers all of Sarah&rsquo;s questions, and Sarah seems very concerned.</p>
+      <p>The customer that James faxed information to has complained to Sarah about false representations James made about the condition of the listing. A representative from the state licensing agency has sent Sarah a formal letter stating that the state has started an investigation.</p>
+      <ol>
+        <li>Should James have a written contract with Aunt Betty? Should he have a written contract with Sarah? Could James earn a commission?
+          <% if current_user.answers.where(question_id: '4-1').count > 0 %>
+            <p class="answer-response"><%= current_user.answers.where(question_id: '4-1').first.response %></p>
+          <% else %>
+            <%= form_for(@answer, html: { class: "form-horizontal", role: "form" }) do |f| %>
+              <%= f.text_area :response, class: "form-control" %>
+              <%= f.text_field :question_id, class: "form-control", :value => '4-1' %>
+              <%= f.number_field :user_id, class: "form-control", :value => current_user.id  %>
+              <%= f.submit ( f.object.new_record? ? "Save Answer" : "Save Answer"), class: "btn btn-primary" %>
+          <% end %>
+        <% end %>
+      </li>
+        <li>Aunt Betty wanted to der her nephew a favor. Should this have influenced her decisions?
+          <% if current_user.answers.where(question_id: '4-2').count > 0 %>
+            <p class="answer-response"><%= current_user.answers.where(question_id: '4-2').first.response %></p>
+          <% else %>
+            <%= form_for(@answer, html: { class: "form-horizontal", role: "form" }) do |f| %>
+              <%= f.text_area :response, class: "form-control" %>
+              <%= f.text_field :question_id, class: "form-control", :value => '4-2' %>
+              <%= f.number_field :user_id, class: "form-control", :value => current_user.id  %>
+              <%= f.submit ( f.object.new_record? ? "Save Answer" : "Save Answer"), class: "btn btn-primary" %>
+          <% end %>
+        <% end %>
+      </li>
+        <li>Was James authorized to make a set of keys? Open the house to the appraiser? Talk to a member of the public over the phone? Talk about a listing to a member of the public? Show a house to Carrie, a broker?
+          <% if current_user.answers.where(question_id: '4-3').count > 0 %>
+            <p class="answer-response"><%= current_user.answers.where(question_id: '4-3').first.response %></p>
+          <% else %>
+            <%= form_for(@answer, html: { class: "form-horizontal", role: "form" }) do |f| %>
+              <%= f.text_area :response, class: "form-control" %>
+              <%= f.text_field :question_id, class: "form-control", :value => '4-3' %>
+              <%= f.number_field :user_id, class: "form-control", :value => current_user.id  %>
+              <%= f.submit ( f.object.new_record? ? "Save Answer" : "Save Answer"), class: "btn btn-primary" %>
+          <% end %>
+        <% end %>
+      </li>
+        <li>Sarah was quite upset by the way Betty handled James&rsquo; hiring. How could she have prevented such lax hiring practices? Should James have signed/initialed a statement that he read and understood the policy and procedures manual?
+          <% if current_user.answers.where(question_id: '4-4').count > 0 %>
+            <p class="answer-response"><%= current_user.answers.where(question_id: '4-4').first.response %></p>
+          <% else %>
+            <%= form_for(@answer, html: { class: "form-horizontal", role: "form" }) do |f| %>
+              <%= f.text_area :response, class: "form-control" %>
+              <%= f.text_field :question_id, class: "form-control", :value => '4-4' %>
+              <%= f.number_field :user_id, class: "form-control", :value => current_user.id  %>
+              <%= f.submit ( f.object.new_record? ? "Save Answer" : "Save Answer"), class: "btn btn-primary" %>
+          <% end %>
+        <% end %>
+      </li>
+        <li>What is Betty&rsquo;s liability for James&rsquo; actions? What is Sarah&rsquo;s liability for James and Betty&rsquo;s actions?
+          <% if current_user.answers.where(question_id: '4-5').count > 0 %>
+            <p class="answer-response"><%= current_user.answers.where(question_id: '4-5').first.response %></p>
+          <% else %>
+            <%= form_for(@answer, html: { class: "form-horizontal", role: "form" }) do |f| %>
+              <%= f.text_area :response, class: "form-control" %>
+              <%= f.text_field :question_id, class: "form-control", :value => '4-5' %>
+              <%= f.number_field :user_id, class: "form-control", :value => current_user.id  %>
+              <%= f.submit ( f.object.new_record? ? "Save Answer" : "Save Answer"), class: "btn btn-primary" %>
+          <% end %>
+        <% end %>
+      </li>
+        <li>What is the name of the state licensing agency? Do they have a case against James? Betty? Sarah?
+          <% if current_user.answers.where(question_id: '4-6').count > 0 %>
+            <p class="answer-response"><%= current_user.answers.where(question_id: '4-6').first.response %></p>
+          <% else %>
+            <%= form_for(@answer, html: { class: "form-horizontal", role: "form" }) do |f| %>
+              <%= f.text_area :response, class: "form-control" %>
+              <%= f.text_field :question_id, class: "form-control", :value => '4-6' %>
+              <%= f.number_field :user_id, class: "form-control", :value => current_user.id  %>
+              <%= f.submit ( f.object.new_record? ? "Save Answer" : "Save Answer"), class: "btn btn-primary" %>
+          <% end %>
+        <% end %>
+      </li>
+      </ol>
+    </div>
+    <h3>Section 2 Audio</h3>
+    <div class="pane">
+      <%= audio_tag ('http://ilrealestateschool-75hour.com/15-hour/unit-4-section-2.mp3'), :controls =>true, :autoplay =>false, :preload =>:none %>
+    </div>
+
+  </div>
+
+  <h3>Unit 5</h3>
+
+  <div class="pane">
+
+    <h3>Section 1 Audio</h3>
+    <div class="pane">
+      <%= audio_tag ('http://ilrealestateschool-75hour.com/15-hour/unit-5-section-1.mp3'), :controls =>true, :autoplay =>false, :preload =>:none %>
+    </div>
+    <h3>Questions 1-6</h3>
+    <div class="pane">
+      <p><strong>Distressed Property/Other Professionals</strong></p>
+      <p>Brenda wanted to invest in fixer-uppers. She knows there is a lot of money to be made in real estate, and she is willing to put in the work to learn real estate and make simple repairs herself. Although she has modest funds and a good credit score, she&rsquo;s nervous about starting without experience and losing all her money.</p>
+      <p>Brenda signs up for a real estate brokerage course at a local community college and passes. Although she qualified to take her broker exam, she decides not to do so. Brenda then contacts Bob, a local real estate broker who advertises &ldquo;Fixer Uppers Are My Specialty.&rdquo; Bob explains that he has several distressed properties, some of which are bank-owned, which require &ldquo;tender loving care.&rdquo; Brenda is quite interested, and because she has a broker course under her belt, she asks to see several of Bob&rsquo;s listings.</p>
+      <p>The first listing that Brenda inspects interests her. It&rsquo;s 900 square-foot brick-and-frame ranch over a full, unfinished basement. The house has five rooms, two bedrooms, and a bath. The listing is small relative to its neighborhood and requires several repairs. The owner is a bank, and the property is currently vacant and has been winterized. The water pipes have been drained and anti-freeze has been poured into some pipes and fixtures (it&rsquo;s currently winter in the Midwest).</p>
+      <p>As Bob shows Brenda the house, he explains, &ldquo;The bank has assured me this house is in good structural condition. I have a letter here from a contractor assuring us that this house only needs minor cosmetic repairs. A do-it-yourselfer such as you shouldn&rsquo;t have any trouble fixing it up and flipping it quickly.&rdquo; </p>
+      <p>Brenda is uncertain, but she is eager to buy a house and start working- she wants to make money. She trusts Bob implicitly. </p>
+      <p>When Brenda wants to hire a home inspector, Bob just hands her a copy of the contractor&rsquo;s report. &ldquo;Why waste all that money on a home inspection when we have this inspection already?&rdquo; he says. &ldquo;Besides, we&rsquo;ll get an appraisal soon. The appraiser will inspect the house.&rdquo; Brenda relents and accepts the contractor&rsquo;s report.</p>
+      <p>Because the house was built in 1950, Brenda thought the paint should be tested for lead. After all, she learned in her brokerage course that houses built before 1978 might contain lead. Bob explained that this was not a significant issue and that, if the house tested positive, Brenda would need to either remove the lead or disclose the lead-based paint to future prospective buyers and tenants. She would need to do the same if the property was tested for radon.  Brenda decides not to pursue the lead testing or radon testing.</p>
+      <p>Brenda makes an offer, which is immediately accepted by the bank. Bob congratulates her on &ldquo;starting the path to real estate riches.&rdquo; Brenda&rsquo;s full-time day job starts to take up all her time. Her boss insists she work a great deal of overtime or &ldquo;I&rsquo;ll find someone who will.&rdquo; Brenda has very little spare time, and her new investment sits and languishes for several months. The neighborhood owners&rsquo; association is impatient and tells Brenda that her house is a boarded-up eyesore in the community. Brenda calls Bob for advice only to find out Bob no longer works at the brokerage. The sponsoring broker isn&rsquo;t interested in talking to Brenda due to irregularities associated with Bob&rsquo;s employment. </p>
+      <p>Brenda calls Patrice, a broker recommended to her by a friend. Brenda explains that she is losing money supporting her investment and does not have the time or money to fix it anymore. &ldquo;I just want to sell it &lsquo;as-is&rsquo; and break even,&rdquo; she says.</p>
+      <p>Patrice explains that selling &ldquo;as-is&rdquo; is not an acceptable option and recommends that Brenda consult a real estate attorney before proceeding.</p>
+      <ol>
+        <li>What liability does Bob have? What liability does Bob&rsquo;s sponsoring broker have? Should Brenda report Bob and his broker to the state licensing agency?
+          <% if current_user.answers.where(question_id: '5-1').count > 0 %>
+            <p class="answer-response"><%= current_user.answers.where(question_id: '5-1').first.response %></p>
+          <% else %>
+            <%= form_for(@answer, html: { class: "form-horizontal", role: "form" }) do |f| %>
+              <%= f.text_area :response, class: "form-control" %>
+              <%= f.text_field :question_id, class: "form-control", :value => '5-1' %>
+              <%= f.number_field :user_id, class: "form-control", :value => current_user.id  %>
+              <%= f.submit ( f.object.new_record? ? "Save Answer" : "Save Answer"), class: "btn btn-primary" %>
+          <% end %>
+        <% end %>
+      </li>
+        <li>Was Brenda properly prepared to tackle this project? What advice should she have been given by Bob? Why are brokers licensed? Who is the state trying to protect by mandating real estate licensure?
+          <% if current_user.answers.where(question_id: '5-2').count > 0 %>
+            <p class="answer-response"><%= current_user.answers.where(question_id: '5-2').first.response %></p>
+          <% else %>
+            <%= form_for(@answer, html: { class: "form-horizontal", role: "form" }) do |f| %>
+              <%= f.text_area :response, class: "form-control" %>
+              <%= f.text_field :question_id, class: "form-control", :value => '5-2' %>
+              <%= f.number_field :user_id, class: "form-control", :value => current_user.id  %>
+              <%= f.submit ( f.object.new_record? ? "Save Answer" : "Save Answer"), class: "btn btn-primary" %>
+          <% end %>
+        <% end %>
+      </li>
+        <li>Brenda lists her house with Patrice. A home inspection reveals several serious defects, including lead-based paint and high levels of radon, which will cost several thousand dollars to fix. Brenda&rsquo;s attorney recommends that Brenda disclose this on the seller disclosure form. The property is now much more difficult to market and will be sold for much less than Brenda paid. Brenda is upside down; she owns more money that the house is worth. The lender is threatening to sue for the deficiency if they lose money at the closing. What are Brenda&rsquo;s options?
+          <% if current_user.answers.where(question_id: '5-3').count > 0 %>
+            <p class="answer-response"><%= current_user.answers.where(question_id: '5-3').first.response %></p>
+          <% else %>
+            <%= form_for(@answer, html: { class: "form-horizontal", role: "form" }) do |f| %>
+              <%= f.text_area :response, class: "form-control" %>
+              <%= f.text_field :question_id, class: "form-control", :value => '5-3' %>
+              <%= f.number_field :user_id, class: "form-control", :value => current_user.id  %>
+              <%= f.submit ( f.object.new_record? ? "Save Answer" : "Save Answer"), class: "btn btn-primary" %>
+          <% end %>
+        <% end %>
+      </li>
+        <li>The house was appraised when Brenda applied for her mortgage. Should the appraiser have noted all the repairs in the report? Brenda claims she never saw the appraisal. Does Brenda have a claim with the appraiser? Should she report the appraiser to the state appraisal board?
+          <% if current_user.answers.where(question_id: '5-4').count > 0 %>
+            <p class="answer-response"><%= current_user.answers.where(question_id: '5-4').first.response %></p>
+          <% else %>
+            <%= form_for(@answer, html: { class: "form-horizontal", role: "form" }) do |f| %>
+              <%= f.text_area :response, class: "form-control" %>
+              <%= f.text_field :question_id, class: "form-control", :value => '5-4' %>
+              <%= f.number_field :user_id, class: "form-control", :value => current_user.id  %>
+              <%= f.submit ( f.object.new_record? ? "Save Answer" : "Save Answer"), class: "btn btn-primary" %>
+          <% end %>
+        <% end %>
+      </li>
+        <li>Bob, a broker, is working with Brenda as a buyer. What are Bob&rsquo;s responsibilities to disclose his role as a designated agent?
+          <% if current_user.answers.where(question_id: '5-5').count > 0 %>
+            <p class="answer-response"><%= current_user.answers.where(question_id: '5-5').first.response %></p>
+          <% else %>
+            <%= form_for(@answer, html: { class: "form-horizontal", role: "form" }) do |f| %>
+              <%= f.text_area :response, class: "form-control" %>
+              <%= f.text_field :question_id, class: "form-control", :value => '5-5' %>
+              <%= f.number_field :user_id, class: "form-control", :value => current_user.id  %>
+              <%= f.submit ( f.object.new_record? ? "Save Answer" : "Save Answer"), class: "btn btn-primary" %>
+          <% end %>
+        <% end %>
+      </li>
+        <li>Is Bob a dual agent? What are the disclosure obligations Bob faces? If he does not make these disclosures, what recourse does Brenda have? What recourse does the state licensing agency have?
+          <% if current_user.answers.where(question_id: '5-6').count > 0 %>
+            <p class="answer-response"><%= current_user.answers.where(question_id: '5-6').first.response %></p>
+          <% else %>
+            <%= form_for(@answer, html: { class: "form-horizontal", role: "form" }) do |f| %>
+              <%= f.text_area :response, class: "form-control" %>
+              <%= f.text_field :question_id, class: "form-control", :value => '5-6' %>
+              <%= f.number_field :user_id, class: "form-control", :value => current_user.id  %>
+              <%= f.submit ( f.object.new_record? ? "Save Answer" : "Save Answer"), class: "btn btn-primary" %>
+          <% end %>
+        <% end %>
+      </li>
+      </ol>
+    </div>
+    <h3>Section 2 Audio</h3>
+    <div class="pane">
+      <%= audio_tag ('http://ilrealestateschool-75hour.com/15-hour/unit-5-section-2.mp3'), :controls =>true, :autoplay =>false, :preload =>:none %>
+    </div>
+
+  </div>
+
+  <h3>Unit 6</h3>
+
+  <div class="pane">
+
+    <h3>Section 1 Audio</h3>
+    <div class="pane">
+      <%= audio_tag ('http://ilrealestateschool-75hour.com/15-hour/unit-6-section-1.mp3'), :controls =>true, :autoplay =>false, :preload =>:none %>
+    </div>
+    <h3>Questions 1-7</h3>
+    <div class="pane">
+      <p><strong>Offers and Counteroffers</strong></p>
+      <p>Emma is a real estate broker in Twin Oaks. She has several listings and is working with many buyers. By all accounts, Emma is a very successful broker. Bill, her managing broker, is happy with Emma&rsquo;s productivity.</p>
+      <p>Tim, a potential buyer, walks into Emma&rsquo;s office and asks about one of her listings. &ldquo;Could you please tell me about 123 Main Street? It looks perfect for my wife and me.&rdquo; Emma gives him the information, and Tim asks to see the house.</p>
+      <p>Emma calls Mr. and Mrs. Smith, the owners of 123 Main Street, and sets up the appointment. Mr. Smith states, &ldquo;I hope you are a serious buyer. We really need to sell our house quickly.&rdquo;</p>
+      <p>When Tim sees the house, he&rsquo;s quite excited and wants to make an offer. Emma, ever prepared, has a blank offer in her attaché. She helps Tim fill in the blanks on the offer, and she also writes an addendum for an inspection contingency. When Emma is about to present the offer to the Smiths, her mobile phone rings. Her office tells Emma another offer has come in for the Smith residence for substantially less than Tim&rsquo;s offer. Emma considers this and decides not to present the lower offer. </p>
+      <p>The Smiths are happy to see the offer. However, they note that Tim&rsquo;s offer asks to include the dining room ceiling fan. The Smiths cross out the ceiling fan and initial the offer. Emma shows the counteroffer to Tim, who accepts. The Smiths sign the contract and everyone seems happy.</p>
+      <p>Days later, the Smiths learn of the additional offer and are upset. Even though Emma explains the offer was low, the Smiths would have liked to see the offer before deciding which offer to accept. The Smiths threaten to hire an attorney and back out of the offer they signed.</p>
+      <ol>
+        <li>Could the Smiths report Emma to the state licensing agency? How much liability would Emma&rsquo;s sponsoring broker have?
+          <% if current_user.answers.where(question_id: '6-1').count > 0 %>
+            <p class="answer-response"><%= current_user.answers.where(question_id: '6-1').first.response %></p>
+          <% else %>
+            <%= form_for(@answer, html: { class: "form-horizontal", role: "form" }) do |f| %>
+              <%= f.text_area :response, class: "form-control" %>
+              <%= f.text_field :question_id, class: "form-control", :value => '6-1' %>
+              <%= f.number_field :user_id, class: "form-control", :value => current_user.id  %>
+              <%= f.submit ( f.object.new_record? ? "Save Answer" : "Save Answer"), class: "btn btn-primary" %>
+          <% end %>
+        <% end %>
+      </li>
+        <li>Can the Smiths back out of the contract they signed because they feel deceived?
+          <% if current_user.answers.where(question_id: '6-2').count > 0 %>
+            <p class="answer-response"><%= current_user.answers.where(question_id: '6-2').first.response %></p>
+          <% else %>
+            <%= form_for(@answer, html: { class: "form-horizontal", role: "form" }) do |f| %>
+              <%= f.text_area :response, class: "form-control" %>
+              <%= f.text_field :question_id, class: "form-control", :value => '6-2' %>
+              <%= f.number_field :user_id, class: "form-control", :value => current_user.id  %>
+              <%= f.submit ( f.object.new_record? ? "Save Answer" : "Save Answer"), class: "btn btn-primary" %>
+          <% end %>
+        <% end %>
+      </li>
+        <li>Should Emma have helped Tim fill in the blanks on his offer? Should she have helped write an addendum?
+          <% if current_user.answers.where(question_id: '6-3').count > 0 %>
+            <p class="answer-response"><%= current_user.answers.where(question_id: '6-3').first.response %></p>
+          <% else %>
+            <%= form_for(@answer, html: { class: "form-horizontal", role: "form" }) do |f| %>
+              <%= f.text_area :response, class: "form-control" %>
+              <%= f.text_field :question_id, class: "form-control", :value => '6-3' %>
+              <%= f.number_field :user_id, class: "form-control", :value => current_user.id  %>
+              <%= f.submit ( f.object.new_record? ? "Save Answer" : "Save Answer"), class: "btn btn-primary" %>
+          <% end %>
+        <% end %>
+      </li>
+        <li>Was Emma remiss by not having Tim&rsquo;s wife present when the offer was being filled out and accepted? Was the contract valid without her signature?
+          <% if current_user.answers.where(question_id: '6-4').count > 0 %>
+            <p class="answer-response"><%= current_user.answers.where(question_id: '6-4').first.response %></p>
+          <% else %>
+            <%= form_for(@answer, html: { class: "form-horizontal", role: "form" }) do |f| %>
+              <%= f.text_area :response, class: "form-control" %>
+              <%= f.text_field :question_id, class: "form-control", :value => '6-4' %>
+              <%= f.number_field :user_id, class: "form-control", :value => current_user.id  %>
+              <%= f.submit ( f.object.new_record? ? "Save Answer" : "Save Answer"), class: "btn btn-primary" %>
+          <% end %>
+        <% end %>
+      </li>
+        <li>Assume there was earnest money on the contract. What are Emma&rsquo;s duties regarding this earnest money? Is it sufficient for her to keep the earnest money check stapled to the contract, sitting in a file until closing? What is it called if Emma deposited the earnest money into her own personal account and used it to pay bills?
+          <% if current_user.answers.where(question_id: '6-5').count > 0 %>
+            <p class="answer-response"><%= current_user.answers.where(question_id: '6-5').first.response %></p>
+          <% else %>
+            <%= form_for(@answer, html: { class: "form-horizontal", role: "form" }) do |f| %>
+              <%= f.text_area :response, class: "form-control" %>
+              <%= f.text_field :question_id, class: "form-control", :value => '6-5' %>
+              <%= f.number_field :user_id, class: "form-control", :value => current_user.id  %>
+              <%= f.submit ( f.object.new_record? ? "Save Answer" : "Save Answer"), class: "btn btn-primary" %>
+          <% end %>
+        <% end %>
+      </li>
+        <li>What actions could the state licensing agency take against Emma?
+          <% if current_user.answers.where(question_id: '6-6').count > 0 %>
+            <p class="answer-response"><%= current_user.answers.where(question_id: '6-6').first.response %></p>
+          <% else %>
+            <%= form_for(@answer, html: { class: "form-horizontal", role: "form" }) do |f| %>
+              <%= f.text_area :response, class: "form-control" %>
+              <%= f.text_field :question_id, class: "form-control", :value => '6-6' %>
+              <%= f.number_field :user_id, class: "form-control", :value => current_user.id  %>
+              <%= f.submit ( f.object.new_record? ? "Save Answer" : "Save Answer"), class: "btn btn-primary" %>
+          <% end %>
+        <% end %>
+      </li>
+        <li>Who are the offerors?  Who are the offerees?
+          <% if current_user.answers.where(question_id: '6-7').count > 0 %>
+            <p class="answer-response"><%= current_user.answers.where(question_id: '6-7').first.response %></p>
+          <% else %>
+            <%= form_for(@answer, html: { class: "form-horizontal", role: "form" }) do |f| %>
+              <%= f.text_area :response, class: "form-control" %>
+              <%= f.text_field :question_id, class: "form-control", :value => '6-7' %>
+              <%= f.number_field :user_id, class: "form-control", :value => current_user.id  %>
+              <%= f.submit ( f.object.new_record? ? "Save Answer" : "Save Answer"), class: "btn btn-primary" %>
+          <% end %>
+        <% end %>
+      </li>
+      </ol>
+    </div>
+    <h3>Section 2 Audio</h3>
+    <div class="pane">
+      <%= audio_tag ('http://ilrealestateschool-75hour.com/15-hour/unit-6-section-2.mp3'), :controls =>true, :autoplay =>false, :preload =>:none %>
+    </div>
+
+  </div>
+</div>
+
+<div class="mtxl mbxl mrxl inline width50 border paxl">
+  <p>Please type any questions/comments for the instructor in the box below.</p>
+  <% if current_user.feedbacks.count > 0 %>
+    <p><%= current_user.feedbacks.first.comment %></p>
+  <% else %>
+    <%= form_for(@feedback, html: { class: "form-horizontal", role: "form" }) do |f| %>
+      <%= f.text_area :comment, class: "form-control", rows: "20" %>
+      <%= f.number_field :user_id, class: "form-control", :value => current_user.id  %>
+      <%= f.submit ( f.object.new_record? ? "Save Questions/Comments" : "Save Questions/Comments"), class: "btn btn-primary" %>
+    <% end %>
+  <% end %>
+</div>
+
+<div class="mtxl mbxl inline width50 border paxl">
+  <p>Instructor Responses</p>  
+    <p class="answer-response"><%= current_user.feedbacks.first.try(:respond) %></p>
+</div>
+
