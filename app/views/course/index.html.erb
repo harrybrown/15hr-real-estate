@@ -1,4 +1,9 @@
 <div class="accordion">
+  <h3>Introduction</h3>
+    <div class="pane">
+      <%= audio_tag ('http://ilrealestateschool-75hour.com/15-hour/introduction.mp3'), :controls =>true, :autoplay =>false, :preload =>:none %>
+    </div>
+
   <h3>Unit 1</h3>
 
   <div class="pane">
@@ -59,7 +64,7 @@
           <% end %>
         <% end %>
         </li>
-        <li>Anita says &ldquo;The other agents aren&rsquo;t as good as I am. They have been sanctioned by our state licensing agency&rdquo;?
+        <li>Anita says &ldquo;The other agents aren&rsquo;t as good as I am. They've been sanctioned by our state licensing agency.&rdquo; Can she say this? Should she say this?
           <% if current_user.answers.where(question_id: '1-4').count > 0 %>
             <p class="answer-response"><%= current_user.answers.where(question_id: '1-4').first.response %></p>
           <% else %>
@@ -144,7 +149,7 @@
           <% end %>
         <% end %>
       </li>
-        <li>What if the first mortgage balance was $250,000. Would the seller have to bring money to closing?
+        <li>What if the first mortgage balance was $250,000? Would the seller have to bring money to closing?
           <% if current_user.answers.where(question_id: '1-9').count > 0 %>
             <p class="answer-response"><%= current_user.answers.where(question_id: '1-9').first.response %></p>
           <% else %>
@@ -363,7 +368,7 @@
       </li>
       </ol>
     </div>
-    <h3>Section 1 Audio</h3>
+    <h3>Section 2 Audio</h3>
     <div class="pane">
       <%= audio_tag ('http://ilrealestateschool-75hour.com/15-hour/unit-3-section-2.mp3'), :controls =>true, :autoplay =>false, :preload =>:none %>
     </div>

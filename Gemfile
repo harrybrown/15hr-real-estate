@@ -4,6 +4,9 @@ gem 'bcrypt', '~> 3.1.7'
 
 gem 'pry-rails', '~> 0.3.4'
 
+# New Relic needs to be configured to keep app loaded on heroku
+gem 'newrelic_rpm', group: :production
+
 gem 'rails_12factor', group: :production
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
