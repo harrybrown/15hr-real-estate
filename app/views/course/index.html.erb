@@ -329,8 +329,15 @@
     </div>
     <h3>Questions 1-7</h3>
     <div class="pane">
-      <ol start="7">
-        <li>Must the Sivels disclose the radon issue? Is Maureen liable for this disclosure? What steps must be taken to satisfy radon disclosure laws?
+      <p><strong>Fair Housing/Discrimination</strong></p>
+      <p>Lawrence and Melinda Bivens purchased a 78 year-old six-unit apartment building five years ago. The Bivens are considering selling their investment property. They do not live in the six-unit building because, as Melinda says. &ldquo;We can&rsquo;t stand those people.&rdquo;</p>
+      <p>George, a local broker, is asked to prepare a comparative market analysis (CMA) for the Bivens. The Bivens explain to George that a broker named Harriet is their property manager. George meets with the Bivens and presents his CMA, along with a complete explanation of all of the many services George offers.  </p>
+      <p>Melinda says, &ldquo;This is all very well and good, but we want to make sure the right person buys our building.&rdquo; George questions her statement: &ldquo;By right person, I assume you mean someone who is qualified to obtain a mortgage and provide a down payment?&rdquo;</p>
+      <p>Melinda just says &ldquo;Whatever. We just don&rsquo;t want &lsquo;those people&rsquo; taking over this building.&rdquo; George continues his presentation and ultimately obtains a six-month listing at a competitive price. George calls the property manager the next week. Harriet says that the Bivens have given her explicit instructions not to show apartments to foreigners because such people offend the Bivens.</p>
+      <p>This statement concerns George, who asks &ldquo;You mean you actually don&rsquo;t show apartments to foreigners?&rdquo; Harriet replies &ldquo;Well it&rsquo;s not as bad as it sounds. Everyone knows foreigners don&rsquo;t work as hard and don&rsquo;t make as much money. They wouldn&rsquo;t qualify for one of our apartments anyway.&rdquo;</p>
+      <p>George continues questioning Harriet and finds out that she also does not give prospective tenants the HUD-mandated lead-based paint pamphlet because &ldquo;it&rsquo;s not that big a deal as long as they don&rsquo;t have children.&rdquo;</p>
+      <ol>
+        <li>Should George have accepted the listing? George states, &ldquo;I am not discriminating. The owners are the guilty party.&rdquo; Can George filter potential buyers by credit scores? By race?
           <% if current_user.answers.where(question_id: '3-1').count > 0 %>
             <p class="answer-response"><%= current_user.answers.where(question_id: '3-1').first.response %></p>
           <% else %>
@@ -339,10 +346,10 @@
               <%= f.text_field :question_id, class: "form-control", :value => '3-1' %>
               <%= f.number_field :user_id, class: "form-control", :value => current_user.id  %>
               <%= f.submit ( f.object.new_record? ? "Save Answer" : "Save Answer"), class: "btn btn-primary" %>
+            <% end %>
           <% end %>
-        <% end %>
-      </li>
-        <li>What are the total costs involved in the repair? Whose report should receive more weight, the contractor&rsquo;s or the home inspector&rsquo;s? Would it make it different if the contractor has 25 years of experience and the home inspector only two years?
+        </li>
+        <li>Now that George has accepted the listing, could he be guilty of fair housing violations by association? Could he be innocent because he is only &ldquo;following orders?&rdquo;
           <% if current_user.answers.where(question_id: '3-2').count > 0 %>
             <p class="answer-response"><%= current_user.answers.where(question_id: '3-2').first.response %></p>
           <% else %>
@@ -351,10 +358,10 @@
               <%= f.text_field :question_id, class: "form-control", :value => '3-2' %>
               <%= f.number_field :user_id, class: "form-control", :value => current_user.id  %>
               <%= f.submit ( f.object.new_record? ? "Save Answer" : "Save Answer"), class: "btn btn-primary" %>
+            <% end %>
           <% end %>
-        <% end %>
-      </li>
-        <li>Are there other issues that the Sivels and Maureen must address?
+        </li>
+        <li>Is Harriet guilty of fair housing violations? Which ones? Is George obligated to report Harriet to the state licensing agency? To HUD?
           <% if current_user.answers.where(question_id: '3-3').count > 0 %>
             <p class="answer-response"><%= current_user.answers.where(question_id: '3-3').first.response %></p>
           <% else %>
@@ -363,9 +370,57 @@
               <%= f.text_field :question_id, class: "form-control", :value => '3-3' %>
               <%= f.number_field :user_id, class: "form-control", :value => current_user.id  %>
               <%= f.submit ( f.object.new_record? ? "Save Answer" : "Save Answer"), class: "btn btn-primary" %>
+            <% end %>
           <% end %>
-        <% end %>
-      </li>
+        </li>
+        <li>George is employed by Millennium Realty. His sponsoring broker, Ted, has not been informed of the circumstances behind George&rsquo;s listing. What is the extent of Ted&rsquo;s liability if the state rules that George is guilty of discrimination and license law violations? To what extent might professional liability insurance provide coverage for George? Ted?
+          <% if current_user.answers.where(question_id: '3-4').count > 0 %>
+            <p class="answer-response"><%= current_user.answers.where(question_id: '3-4').first.response %></p>
+          <% else %>
+            <%= form_for(@answer, html: { class: "form-horizontal", role: "form" }) do |f| %>
+              <%= f.text_area :response, class: "form-control" %>
+              <%= f.text_field :question_id, class: "form-control", :value => '3-4' %>
+              <%= f.number_field :user_id, class: "form-control", :value => current_user.id  %>
+              <%= f.submit ( f.object.new_record? ? "Save Answer" : "Save Answer"), class: "btn btn-primary" %>
+            <% end %>
+          <% end %>
+        </li>
+        <li>If George tells Ted about the Bivens and Harriet, does this change Ted&rsquo;s overall liability?
+          <% if current_user.answers.where(question_id: '3-5').count > 0 %>
+            <p class="answer-response"><%= current_user.answers.where(question_id: '3-5').first.response %></p>
+          <% else %>
+            <%= form_for(@answer, html: { class: "form-horizontal", role: "form" }) do |f| %>
+              <%= f.text_area :response, class: "form-control" %>
+              <%= f.text_field :question_id, class: "form-control", :value => '3-5' %>
+              <%= f.number_field :user_id, class: "form-control", :value => current_user.id  %>
+              <%= f.submit ( f.object.new_record? ? "Save Answer" : "Save Answer"), class: "btn btn-primary" %>
+            <% end %>
+          <% end %>      
+        </li>
+        <li>What actions should Ted take to limit his liability? Should Ted have a written policies and procedures manual in the office? What should the manual say about issues similar to the ones facing George?
+          <% if current_user.answers.where(question_id: '3-6').count > 0 %>
+            <p class="answer-response"><%= current_user.answers.where(question_id: '3-6').first.response %></p>
+          <% else %>
+            <%= form_for(@answer, html: { class: "form-horizontal", role: "form" }) do |f| %>
+              <%= f.text_area :response, class: "form-control" %>
+              <%= f.text_field :question_id, class: "form-control", :value => '3-6' %>
+              <%= f.number_field :user_id, class: "form-control", :value => current_user.id  %>
+              <%= f.submit ( f.object.new_record? ? "Save Answer" : "Save Answer"), class: "btn btn-primary" %>
+            <% end %>
+          <% end %>
+        </li>
+        <li>Did George or Harriet violate confidentiality when they discussed the Bivens&rsquo; situation? Should either George or Harriet have obtained permission from the Bivens beforehand?
+          <% if current_user.answers.where(question_id: '3-7').count > 0 %>
+            <p class="answer-response"><%= current_user.answers.where(question_id: '3-7').first.response %></p>
+          <% else %>
+            <%= form_for(@answer, html: { class: "form-horizontal", role: "form" }) do |f| %>
+              <%= f.text_area :response, class: "form-control" %>
+              <%= f.text_field :question_id, class: "form-control", :value => '3-7' %>
+              <%= f.number_field :user_id, class: "form-control", :value => current_user.id  %>
+              <%= f.submit ( f.object.new_record? ? "Save Answer" : "Save Answer"), class: "btn btn-primary" %>
+            <% end %>
+          <% end %>
+        </li>
       </ol>
     </div>
     <h3>Section 2 Audio</h3>
