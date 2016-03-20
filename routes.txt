@@ -1,0 +1,59 @@
+                  Prefix Verb   URI Pattern                    Controller#Action
+               feedbacks GET    /feedbacks(.:format)           feedbacks#index
+                         POST   /feedbacks(.:format)           feedbacks#create
+            new_feedback GET    /feedbacks/new(.:format)       feedbacks#new
+           edit_feedback GET    /feedbacks/:id/edit(.:format)  feedbacks#edit
+                feedback GET    /feedbacks/:id(.:format)       feedbacks#show
+                         PATCH  /feedbacks/:id(.:format)       feedbacks#update
+                         PUT    /feedbacks/:id(.:format)       feedbacks#update
+                         DELETE /feedbacks/:id(.:format)       feedbacks#destroy
+              worksheets GET    /worksheets(.:format)          worksheets#index
+                         POST   /worksheets(.:format)          worksheets#create
+           new_worksheet GET    /worksheets/new(.:format)      worksheets#new
+          edit_worksheet GET    /worksheets/:id/edit(.:format) worksheets#edit
+               worksheet GET    /worksheets/:id(.:format)      worksheets#show
+                         PATCH  /worksheets/:id(.:format)      worksheets#update
+                         PUT    /worksheets/:id(.:format)      worksheets#update
+                         DELETE /worksheets/:id(.:format)      worksheets#destroy
+                 answers GET    /answers(.:format)             answers#index
+                         POST   /answers(.:format)             answers#create
+              new_answer GET    /answers/new(.:format)         answers#new
+             edit_answer GET    /answers/:id/edit(.:format)    answers#edit
+                  answer GET    /answers/:id(.:format)         answers#show
+                         PATCH  /answers/:id(.:format)         answers#update
+                         PUT    /answers/:id(.:format)         answers#update
+                         DELETE /answers/:id(.:format)         answers#destroy
+        new_user_session GET    /users/sign_in(.:format)       devise/sessions#new
+            user_session POST   /users/sign_in(.:format)       devise/sessions#create
+    destroy_user_session DELETE /users/sign_out(.:format)      devise/sessions#destroy
+           user_password POST   /users/password(.:format)      devise/passwords#create
+       new_user_password GET    /users/password/new(.:format)  devise/passwords#new
+      edit_user_password GET    /users/password/edit(.:format) devise/passwords#edit
+                         PATCH  /users/password(.:format)      devise/passwords#update
+                         PUT    /users/password(.:format)      devise/passwords#update
+cancel_user_registration GET    /users/cancel(.:format)        devise/registrations#cancel
+       user_registration POST   /users(.:format)               devise/registrations#create
+   new_user_registration GET    /users/sign_up(.:format)       devise/registrations#new
+  edit_user_registration GET    /users/edit(.:format)          devise/registrations#edit
+                         PATCH  /users(.:format)               devise/registrations#update
+                         PUT    /users(.:format)               devise/registrations#update
+                         DELETE /users(.:format)               devise/registrations#destroy
+                   users GET    /users(.:format)               users#index
+                         POST   /users(.:format)               users#create
+                new_user GET    /users/new(.:format)           users#new
+               edit_user GET    /users/:id/edit(.:format)      users#edit
+                    user GET    /users/:id(.:format)           users#show
+                         PATCH  /users/:id(.:format)           users#update
+                         PUT    /users/:id(.:format)           users#update
+                         DELETE /users/:id(.:format)           users#destroy
+              home_index GET    /home(.:format)                home#index
+                         POST   /home(.:format)                home#create
+                new_home GET    /home/new(.:format)            home#new
+               edit_home GET    /home/:id/edit(.:format)       home#edit
+                    home GET    /home/:id(.:format)            home#show
+                         PATCH  /home/:id(.:format)            home#update
+                         PUT    /home/:id(.:format)            home#update
+                         DELETE /home/:id(.:format)            home#destroy
+                    root GET    /                              home#index
+                  course GET    /course(.:format)              course#index
+                         GET    /course(.:format)              course#show
