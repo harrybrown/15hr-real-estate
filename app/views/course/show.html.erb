@@ -114,7 +114,7 @@
         Title Charges: $1,200<br />
         Attorney Fee: $500</p>
         <% if @user.worksheets.count > 0 %>
-          <%= render :file => 'worksheets/show' %>
+          <%= render :file => 'worksheets/show_student' %>
         <% else %>
           <%= render 'worksheets/form' %>
         <% end %>
