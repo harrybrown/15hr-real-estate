@@ -12,6 +12,7 @@
       <tr>
             <th>User</th>
             <th>Student Comment</th>
+            <th>Question Answered</th>
             <th>Instructor Response</th>
             <th></th>
         <th></th>
@@ -23,6 +24,7 @@
       <%= content_tag_for(:tr, @users) do |user| %>
         <td><%= user.email %></td>
         <td><%= user.feedbacks.first.try(:comment) %></td>
+        <td><%= user.feedbacks.first.try(:questionbeinganswered) %></td>
         <td><%= user.feedbacks.first.try(:respond) %></td>
         <td> 
 

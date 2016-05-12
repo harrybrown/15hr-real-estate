@@ -754,7 +754,19 @@
 <div class="mtxl mbxl mrxl inline width50 border paxl">
   <p>Please type any questions/comments for the instructor in the box below.</p>
   <% if @user.feedbacks.count > 0 %>
-    <p><%= @user.feedbacks.first.comment %></p>
+    <% if @user.feedbacks.first.comment.blank? %>
+      <%= form_for(@user.feedbacks.first, html: { class: "form-horizontal", role: "form" }) do |f| %>
+        <%= f.text_area :comment, class: "form-control", rows: "20" %>
+        <%= f.number_field :user_id, class: "form-control", :value => @user.id  %>
+        <div style="display: none !important;">
+          <%= f.text_area :questionbeinganswered, class: "form-control", rows: "20",  :value => "" %>
+          <%= f.text_area :respond, class: "form-control", rows: "20",  :value => "" %>
+        </div>
+      <%= f.submit class: "btn btn-primary" %>
+      <% end %>
+    <% else %>
+      <p><%= @user.feedbacks.first.comment %></p>
+    <% end %>
   <% else %>
     <%= form_for(@feedback, html: { class: "form-horizontal", role: "form" }) do |f| %>
       <%= f.text_area :comment, class: "form-control", rows: "20" %>
@@ -765,7 +777,8 @@
 </div>
 
 <div class="mtxl mbxl inline width50 border paxl">
-  <p>Instructor Responses</p>  
+  <p class="mbxl bold">Instructor Responses</p>
+  <pclass="mbxl"><%= @user.feedbacks.first.try(:questionbeinganswered) %></p>
     <p class="answer-response"><%= @user.feedbacks.first.try(:respond) %></p>
 </div>
 
